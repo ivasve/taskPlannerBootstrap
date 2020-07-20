@@ -1,68 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      shrink-to-fit="no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
 
-    <title>Personal planner</title>
-  </head>
-  <body class="container">
-    <h1 class="text-center">Personal Planner</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
-    <!--Button trigger modal-->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-toggle="modal"
-      data-target="#taskModal"
-    >
-      Create task
-    </button>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 
-    <h5 class="my-4">
-      Today - Tue 14 July
-    </h5>
+  <title>Personal planner</title>
+</head>
 
-    <div class="card">
-      <div class="card-body bg-warning">
-        <h5 class="card-title">Service car</h5>
-        <p class="card-text">Take car to dealership for service</p>
+<body class="container">
+  <h1 class="text-center">Personal Planner</h1>
+
+  <!--Button trigger modal-->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskModal">
+    Create task
+  </button>
+
+  <h5 class="my-4">
+    Today - Tue 14 July
+  </h5>
+
+ <div class="row">
+   <div class="col-lg-4">
+
+  <div class="card my-4">
+    <div class="card-body bg-warning">
+      <h5 class="card-title">Service car</h5>
+      <p class="card-text">Take car to dealership for service</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Asignee: Ivana Jones</li>
+      <li class="list-group-item">Time: 9:00am</li>
+      <li class="list-group-item">Status: To Do</li>
+      <li class="list-group-item">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskEditModal">Edit</button>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="card my-4">
+    <div class="card-body bg-primary">
+      <h5 class="card-title">Groceries</h5>
+      <p class="card-text">Get this week's groceries</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Asignee: Kriss Wilson</li>
+      <li class="list-group-item">Time: 11:00am</li>
+      <li class="list-group-item">Status: In Progress</li>
+      <li class="list-group-item">
+    
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskEditModal">Edit</button>
+
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card my-4">
+      <div class="card-body bg-primary">
+        <h5 class="card-title">Walk</h5>
+        <p class="card-text">Go for daily walk</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Asignee: Ivana Jones</li>
-        <li class="list-group-item">Time: 9:00am</li>
-        <li class="list-group-item">Status: Pending</li>
+        <li class="list-group-item">Time: 16:00am</li>
+        <li class="list-group-item">Status: To Do</li>
         <li class="list-group-item">
-          <button class="btn btn-primary">Edit</button>
+      
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskEditModal">Edit</button>
+  
         </li>
       </ul>
+    </div>
     </div>
 
-    <div class="card">
-      <div class="card-body bg-warning">
-        <h5 class="card-title">Service car</h5>
-        <p class="card-text">Take car to dealership for service</p>
+    <div class="col-lg-4">
+      <div class="card my-4">
+        <div class="card-body bg-danger">
+          <h5 class="card-title">Ring Paul</h5>
+          <p class="card-text">Discuss upcoming BBQ</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Asignee: Ivana Jones</li>
+          <li class="list-group-item">Time: 9:00am</li>
+          <li class="list-group-item">Status: Completed</li>
+          <li class="list-group-item">
+        
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskEditModal">Edit</button>
+    
+          </li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Asignee: Ivana Jones</li>
-        <li class="list-group-item">Time: 9:00am</li>
-        <li class="list-group-item">Status: Pending</li>
-        <li class="list-group-item">
-          <button class="btn btn-primary">Edit</button>
-        </li>
-      </ul>
+      </div>
+
+
+  <div class="col-lg-4">
+  <div class="card my-4">
+    <div class="card-body bg-success">
+      <h5 class="card-title">Marinate Chicken</h5>
+      <p class="card-text">Prepare the chicken for tomorrow's lunch</p>
     </div>
-<!--
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Asignee: Ivana Jones</li>
+      <li class="list-group-item">Time: 9:00am</li>
+      <li class="list-group-item">Status: In Progress</li>
+      <li class="list-group-item">
+    
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskEditModal">Edit</button>
+
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  </div>
+
+  <!--
 Button trigger modal 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
   Create task
@@ -89,40 +156,61 @@ Modal
   </div>
 </div>
 -->
-    <div class="modal fade" id="taskModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title">Create Task</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+  <div class="modal fade" id="taskModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title">Create Task</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body bg-light">
-            <form>
+        <div class="modal-body bg-light">
+          <form>
+            <div class="form-group">
+              <label for="taskName" class="col">Task Name</label>
+              <div class="col-8">
+                <input type="text" class="form-control" id="taskName" placeholder="Task Name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="taskDescription" class="col">Task Description</label>
+              <div class="col-8">
+                <!--type="text"-->
+                <textarea class="form-control" id="taskDescription" rows="3" placeholder="Task Description"></textarea>
+                </div>  
+              </div>
+
               <div class="form-group">
-                <label for="taskName" class="col">Task Name</label>
+                <label for="assignedTo" class="col">Assigned To</label>
                 <div class="col-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="taskName"
-                    placeholder="Task Name"
-                  />
+                  <input type="text" class="form-control" id="assignedTo" placeholder="Assigned To" />
                 </div>
               </div>
           
+
               <div class="form-group">
-                <label for="taskDescription" class="col">Task Description</label>
+                <label for="dueDate" class="col">Date Due</label>
                 <div class="col-8">
-                  <!--type="text"-->
-                  <textarea          
-                    class="form-control"
-                    id="taskDescription"
-                    rows="3"
-                    placeholder="Task Description">
+                  <input type="text" class="form-control" id="dueDate" placeholder="20/07/2020" />
                 </div>
+              </div>
+
+
+
+              <div class="form-group">
+                <label for="status">Status</label>
+                <div class="col-8">
+                <select class="form-control" id="status">
+                  <option>To Do</option>
+                  <option>In Progress</option>
+                  <option>Review</option>
+                  <option>Done</option>
+                  
+                </select>
+              </div>
               </div>
 
             </form>
@@ -135,20 +223,75 @@ Modal
         </div>
       </div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+    
+    <div class="modal fade" id="taskEditModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title">Edit Task</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+  
+          <div class="modal-body bg-light">
+            <form>
+              <div class="form-group">
+                <label for="taskName" class="col">Task Name</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" id="taskName" value="Service Car" placeholder="Task Name" />
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="taskDescription" class="col">Task Description</label>
+                <div class="col-8">
+                  <!--type="text"-->
+                  <textarea class="form-control" id="taskDescription" rows="3"  placeholder="Task Description">Take car to dealership for service</textarea>
+                  </div>  
+                </div>
+  
+                <div class="form-group">
+                  <label for="assignedTo" class="col">Assigned To</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="assignedTo" value="Ivana Jones" placeholder="Assigned To" />
+                  </div>
+                </div>
+            
+  
+                <div class="form-group">
+                  <label for="dueDate" class="col">Date Due</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="dueDate" placeholder="20/07/2020" />
+                  </div>
+                </div>
+  
+  
+  
+                <div class="form-group">
+                  <label for="status">Status</label>
+                  <div class="col-8">
+                  <select class="form-control" id="status">
+                    <option>To Do</option>
+                    <option>In Progress</option>
+                    <option>Review</option>
+                    <option>Done</option>
+                    
+                  </select>
+                </div>
+                </div>
+  
+              </form>
+            </div>
+           
+            <div class="modal-footer bg-light">
+            <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+             <button class="btn btn-primary">Save</button>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+
   </body>
 </html>
