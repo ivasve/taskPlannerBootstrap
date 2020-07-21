@@ -59,35 +59,97 @@
       <div class="col-lg-4">
         <div class="card my-4">
           <div
-            class="card-body"
-            style="background-color: rgb(252, 163, 31); color: white;"
+            class="card-header"
+            id="header1"
+            style="background-color: rgb(252, 163, 31);"
           >
-            <h5 class="card-title">Service car</h5>
-            <p class="card-text">Take car to dealership for service</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <!-- Style:Background color is just an example. will be changed. -->
-            <li
-              class="list-group-item"
-              style="background-color: rgb(141, 234, 250);"
-            >
-              Asignee: Kriss Wilson
-            </li>
-            <li class="list-group-item">Date Due: 23/07/2020</li>
-            <li class="list-group-item">Status: To Do</li>
-            <li class="list-group-item">
+            <h2 class="mb-0 text-left" style="text-decoration: none;">
               <button
+                id="b1"
+                class="btn btn-block text-left"
                 type="button"
-                class="btn btn-primary"
-                data-toggle="modal"
-                data-target="#taskEditModal"
+                data-toggle="collapse"
+                data-target="#collapse1"
+                aria-expanded="true"
+                aria-controls="collapse1"
+                style="background-color: rgb(252, 163, 31); border: none;"
               >
-                Edit
+                <strong
+                  ><h5
+                    class="text-center"
+                    style="
+                      text-decoration: none;
+                      background-color: rgb(252, 163, 31);
+                      color: white;
+                    "
+                  >
+                    Service car
+                  </h5></strong
+                >
               </button>
-            </li>
-          </ul>
+            </h2>
+          </div>
+          <div id="collapse1" class="collapse show" aria-labelledby="head1">
+            <div class="card-body">
+              <h5 class="card-title">Take car to dealership for service</h5>
+
+              <ul class="list-group list-group-flush">
+                <!-- Style:Background color is just an example. will be changed. -->
+                <li
+                  class="list-group-item"
+                  style="background-color: rgb(141, 234, 250);"
+                >
+                  Asignee: Kriss Wilson
+                </li>
+                <li class="list-group-item">Date Due: 23/07/2020</li>
+                <li class="list-group-item">
+                  <div class="dropdown show">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="true"
+                    >
+                      Status
+                    </button>
+                    <div
+                      class="dropdown-menu show"
+                      aria-labelledby="dropdownMenuButton"
+                      x-placement="bottom-start"
+                      style="
+                        position: absolute;
+                        transform: translate3d(0px, 38px, 0px);
+                        top: 0px;
+                        left: 0px;
+                        will-change: transform;
+                      "
+                    >
+                      <a class="dropdown-item" href="#">TO DO</a>
+                      <a class="dropdown-item" href="#">In progress</a>
+                      <a class="dropdown-item" href="#">REVIEW</a>
+                      <a class="dropdown-item" href="#">DONE</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#taskEditModal"
+                  >
+                    Edit
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="col-lg-4">
         <div class="card my-4">
           <!-- Style:Background color is just an example. will be changed. -->
